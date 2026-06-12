@@ -4,7 +4,7 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 env:
-  IMAGE_NAME: liuzhen932/app-blessing-skin-server
+  IMAGE_NAME: liuzhen932/app-namelessmc-server
 
 jobs:
   build:
