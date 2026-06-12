@@ -4,7 +4,7 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 env:
-  IMAGE_NAME: liuzhen932/app-namelessmc-server
+  IMAGE_NAME: liuzhen932/app-namelessmc
 
 jobs:
   build:
@@ -31,13 +31,12 @@ jobs:
         with:
           images: docker.io/${{ env.IMAGE_NAME }}
           tags: |
-            latest
-            php84
+            latest-server
 
       - name: Download source
         run: |
           sudo apt-get install wget || true
-          wget -O srccc.zip https://github.com/liuzhen9320/blessing-skin-server/releases/download/dev/blessing-skin-server-16f46b5.zip
+          wget -O srccc.zip https://github.com/NamelessMC/Nameless/releases/download/v2.2.5/nameless-deps-dist.zip
           unzip -o srccc.zip -d ./src
           ls -all ./src
 
